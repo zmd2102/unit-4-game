@@ -7,8 +7,10 @@ $( document ).ready(function(){
     $(".wins").text("Wins: " + wins);
     var losses = 0;
     $(".losses").text("Losses: " + losses);
+    
+    var totalScore = 0;
 
-    function reset() {
+      function reset() {
       computerGuess = Math.floor((Math.random()*101)+19);
       $(".actualRandomNumber").text(computerGuess);
       blueStone = Math.floor((Math.random()*11)+1);
@@ -22,21 +24,22 @@ $( document ).ready(function(){
       
     }
 
-    var totalScore = 0;
     var blueStone = Math.floor((Math.random()*11)+1);
     $("#blue").on("click", function() {
         totalScore = totalScore + blueStone;
         $(".totalScore").text("Your total score is: " + totalScore);
         if (totalScore === computerGuess){
-          alert("GOOD JOB");
+          alert("*Snaps Fingers*");
           wins++;
           $(".wins").text("Wins: " + wins);
+          window.open("https://www.youtube.com/watch?v=7pwpFvrDsrs");
           reset();
         }
         else if ( totalScore > computerGuess){
-          alert("LOSER");
+          alert("The Avengers win again!");
           losses += 1;
           $(".losses").text("Losses: " + losses);
+          window.open("https://www.youtube.com/watch?v=7pwpFvrDsrs");
           reset();
         } 
         console.log(losses);
@@ -48,13 +51,13 @@ $( document ).ready(function(){
       totalScore = totalScore + yellowStone;
       $(".totalScore").text("Your total score is: " + totalScore);
       if (totalScore === computerGuess){
-        alert("GOOD JOB");
+        alert("*Snaps Fingers*");
         wins++;
         $(".wins").text("Wins: " + wins);
         reset();
       }
       else if ( totalScore > computerGuess){
-        alert("LOSER");
+        alert("The Avengers win again!");
         losses += 1;
         $(".losses").text("Losses: " + losses);
         reset();
@@ -67,13 +70,13 @@ $( document ).ready(function(){
       totalScore = totalScore + redStone;
       $(".totalScore").text("Your total score is: " + totalScore);
       if (totalScore === computerGuess){
-        alert("GOOD JOB");
+        alert("*Snaps Fingers*");
         wins++;
         $(".wins").text("Wins: " + wins);
         reset();
       }
       else if ( totalScore > computerGuess){
-        alert("LOSER");
+        alert("The Avengers win again!");
         losses += 1;
         $(".losses").text("Losses: " + losses);
         reset();
@@ -84,13 +87,13 @@ $( document ).ready(function(){
       totalScore = totalScore + purpleStone;
       $(".totalScore").text("Your total score is: " + totalScore);
       if (totalScore === computerGuess){
-        alert("GOOD JOB");
+        alert("*Snaps Fingers*");
         wins++;
         $(".wins").text("Wins: " + wins);
         reset();
       }
       else if ( totalScore > computerGuess){
-        alert("LOSER");
+        alert("The Avengers win again!");
         losses += 1;
         $(".losses").text("Losses: " + losses);
         reset();
@@ -101,13 +104,13 @@ $( document ).ready(function(){
       totalScore = totalScore + greenStone;
       $(".totalScore").text("Your total score is: " + totalScore);
       if (totalScore === computerGuess){
-        alert("GOOD JOB");
+        alert("*Snaps Fingers*");
         wins++;
         $(".wins").text("Wins: " + wins);
         reset();
       }
       else if ( totalScore > computerGuess){
-        alert("LOSER");
+        alert("The Avengers win again!");
         losses += 1;
         $(".losses").text("Losses: " + losses);
         reset();
@@ -118,13 +121,13 @@ $( document ).ready(function(){
       totalScore = totalScore + orangeStone;
       $(".totalScore").text("Your total score is: " + totalScore);
       if (totalScore === computerGuess){
-        alert("GOOD JOB");
+        alert("*Snaps Fingers*");
         wins++;
         $(".wins").text("Wins: " + wins);
         reset();
       }
       else if ( totalScore > computerGuess){
-        alert("LOSER");
+        alert("The Avengers win again!");
         losses += 1;
         $(".losses").text("Losses: " + losses);
         reset();
